@@ -27,4 +27,16 @@ public class CalculatorTest {
         // Assert
         assertEquals(7, result, "Difference should be 7");
     }
+    @Test
+    public void testMultiplication() {
+        // Arrange
+        int a = 4;
+        int b = 6;
+
+        // Act
+        int result = calculator.multiply(a, b);
+
+        // Assert
+        assertEquals(24, result, "Product should be 24");
+    }
 }
