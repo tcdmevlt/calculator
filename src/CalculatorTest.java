@@ -15,4 +15,16 @@ public class CalculatorTest {
 
         assertEquals(15, result, "Sum should be 15");
     }
+    @Test
+    public void testSubtraction() {
+        // Arrange
+        int a = 10;
+        int b = 3;
+
+        // Act
+        int result = calculator.subtract(a, b);
+
+        // Assert
+        assertEquals(7, result, "Difference should be 7");
+    }
 }
