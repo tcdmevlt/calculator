@@ -69,4 +69,11 @@ public class CalculatorTest {
         // Assert
         assertEquals(8, result, 0.001, "2^3 should be 8");
     }
+    @Test
+    public void testGCD() {
+        int a = 24;
+        int b = 36;
+        int result = calculator.gcd(a, b);
+        assertEquals(12, result, "GCD of 24 and 36 should be 12");
+    }
 }
