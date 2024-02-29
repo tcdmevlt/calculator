@@ -39,4 +39,16 @@ public class CalculatorTest {
         // Assert
         assertEquals(24, result, "Product should be 24");
     }
+    @Test
+    public void testDivisionByZero() {
+        // Arrange
+        int a = 10;
+        int b = 0;
+
+        // Act
+        double result = calculator.divide(a, b);
+
+        // Assert
+        assertEquals(Double.POSITIVE_INFINITY, result, "Division by zero should return POSITIVE_INFINITY");
+    }
 }
