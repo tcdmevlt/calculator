@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalculatorTest {
 
@@ -43,7 +44,15 @@ public class CalculatorTest {
         // Assert
         assertEquals(24, result, "Product should be 24");
     }
+    @Test
+    public void testDivideByZero() {
+        assertThrows(ArithmeticException.class, () -> calculator.divide(10, 0));
+    }
 
+    @Test
+    public void testZeroPowerZero() {
+        assertThrows(ArithmeticException.class, () -> calculator.power(0, 0));
+    }
     @Test
     public void testDivision() {
         // Arrange
