@@ -14,16 +14,21 @@ public class Calculator {
 
     public double divide(int a, int b) {
         if (b == 0) {
-            return Double.POSITIVE_INFINITY;
+            throw new ArithmeticException("Division by zero");
         }
         return (double) a / b;
     }
 
     public double power(double base, double exponent) {
+        if (base == 0 && exponent == 0) {
+            throw new ArithmeticException("0^0 is undefined");
+        }
+
         double result = 1;
         for (int i = 0; i < exponent; i++) {
             result *= base;
         }
+
         return result;
     }
     public int gcd(int a, int b) {
